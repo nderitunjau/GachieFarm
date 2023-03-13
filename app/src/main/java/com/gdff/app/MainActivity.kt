@@ -9,14 +9,7 @@ class MainActivity : AppCompatActivity() {
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        //contructor Handler() seems to have been deprecated,tomorrow we might try a different approach towards this
-        Handler().postDelayed(Runnable { //This method will be executed once the timer is over
-            // Start your app main activity
-            val i = Intent(this@MainActivity, User_registration::class.java)
-            startActivity(i)
-            // close this activity
-            finish()
-        }, 3000)
+        startActivity(Intent(this@MainActivity, User_registration::class.java))
+        finish()
     }
 }
